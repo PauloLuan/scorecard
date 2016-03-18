@@ -1,0 +1,21 @@
+<head>
+  <title>Placar</title>
+</head>
+
+<body>
+  <h1>Placar dos imbecis!</h1>
+
+  {{> players}}
+</body>
+
+<template name="players">
+    {{#each players}}
+        {{> player}}
+    {{/each}}
+</template>
+
+<template name="player">
+    <p><b>{{name}} :</b> {{score}}</p>
+    <button id="add">+</button>
+    <button id="remove">-</button>
+</template>
